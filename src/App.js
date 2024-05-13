@@ -31,7 +31,7 @@ const App = () => {
     const movieFavorites = JSON.parse(localStorage.getItem('react-movie-app-favs')
   );
 
-  setFavorites(movieFavorites);
+  setFavorites(movieFavorites || []);
   }, []);
 
   const saveToLocalStorage = (items) => {
@@ -42,6 +42,7 @@ const App = () => {
     const newFavoriteList = [...favorites, movie];
     setFavorites(newFavoriteList);
     saveToLocalStorage(newFavoriteList);
+    console.log(favorites);
   };
 
   const removeFavoriteMovies = () => {
