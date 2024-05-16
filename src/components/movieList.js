@@ -9,9 +9,9 @@ const movies = props.movies || [];
         <>
             {movies.map((movie, index) => (
                 movie && movie.Poster? (
-                <div className='image-container d-flex justify-content-center'>
+                <div className='image-container d-flex justify-content-center w-25'>
                     <img src = {movie.Poster} alt="poster"></img>
-                    <div onClick = {() => props.handleFavoritesClick()} 
+                    <div onClick = {() => props.handleFavoritesClick(movie)} 
                     className='overlay d-flex align-items-center justify-content-center'>
                     <FavoriteComponent />  
                     </div>

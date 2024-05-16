@@ -8,7 +8,7 @@ const AddFavorites = () => {
             width="1em" 
             height="1em" 
             fill="red" 
-            class="bi bi-suit-heart-fill" 
+            className="bi bi-suit-heart-fill" 
             viewBox="0 0 16 16"
             >
                 <path 

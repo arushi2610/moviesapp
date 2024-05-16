@@ -42,11 +42,12 @@ const App = () => {
     const newFavoriteList = [...favorites, movie];
     setFavorites(newFavoriteList);
     saveToLocalStorage(newFavoriteList);
-    console.log(favorites);
   };
 
-  const removeFavoriteMovies = () => {
-    const newFavoriteList = favorites.filter((favorites) => favorites.imdbID !== movies.imdbID);
+  const removeFavoriteMovies = (movie) => {
+    const newFavoriteList = favorites.filter((favoriteMovie) => {
+      return favoriteMovie?.imdbID !== movie.imdbID;
+    });
 
     setFavorites(newFavoriteList);
     saveToLocalStorage(newFavoriteList);
