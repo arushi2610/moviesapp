@@ -55,7 +55,7 @@ const App = () => {
 
   return (
     <div className="container-fluid movie-app">
-      <div className='row d-flex align-items-center mt-2 mb-4'>
+      <div className='row d-flex align-items-center ml-4 mt-4 mb-4'>
         <MovieListHeading heading = "Movies"/>
         <SearchBox searchValue={searchValue} 
         setSearchValue={setSearchValue} />
@@ -67,7 +67,7 @@ const App = () => {
       FavoriteComponent = {AddFavorites} />
       </div>
 
-      <div className='row d-flex align-items-center mt-4 mb-4'>
+      <div className='row d-flex align-items-center ml-4 mt-4 mb-4'>
         <MovieListHeading heading = "Favorites" />
       </div>
 
